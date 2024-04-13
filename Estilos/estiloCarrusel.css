@@ -1,312 +1,315 @@
-/* Establece un estilo base para el cuerpo del documento */
+/* Estilos generales */
 body {
-    margin: 0; 
-    padding: 0; /* Espaciado interior */
-   
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    background-color: #000; /* Establece el color de fondo negro */
+    color: #eee; /* Establece el color del texto en blanco */
 }
 
-/* Establece un estilo base para los enlaces */
 a {
-    text-decoration: none; 
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 /* Estilos para el menú de navegación */
 .menu {
-    font-family: Arial, sans-serif;
-    background-color: black; /* Color de fondo negro */
-    background-image: linear-gradient(to top, #000000, #333333); /* Degradado de fondo */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno para los elementos */
-    text-align: center; /* Centra el texto */
-    position: sticky; /* Establece el menú como pegajoso */
+    font-family: Arial, sans-serif; /* Establece la fuente del menú */
+    background-color: black; /* Establece el color de fondo del menú */
+    background-image: linear-gradient(to top, #000000, #333333); /* Agrega un degradado de fondo al menú */
+    border-radius: 5px; /* Establece bordes redondeados para el menú */
+    padding: 10px; /* Agrega espacio interno al menú */
+    text-align: center; /* Centra el texto en el menú */
+    position: sticky; /* Hace que el menú sea pegajoso */
     top: 0; /* Coloca el menú en la parte superior */
     z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
 }
-/* Estilos para los separadores */
-.menu .separator {
-    margin-right: 30px; /* Margen derecho entre los separadores */
-}
+
 /* Estilos para los enlaces del menú */
 .menu a {
-    color: white; /* Color de texto blanco */
-    text-decoration: none; /* Sin subrayado para los enlaces */
-    margin-right: 100px; /* Margen derecho entre los enlaces */
+    color: white; /* Establece el color del texto de los enlaces en blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin-right: 40px; /* Agrega margen derecho entre los enlaces */
 }
 
 /* Estilos para los enlaces del menú al pasar el mouse */
 .menu a:hover {
-    color: lightgrey; /* Cambia el color del texto a gris claro al pasar el mouse */
+    color: lightgrey; /* Cambia el color del texto al pasar el mouse a gris claro */
 }
 
-/* Estilos para los elementos del carrusel */
+/* Estilos para el enlace del menú */
+.menu-link {
+    display: inline-block; /* Hace que el enlace sea un bloque en línea */
+    text-align: center; /* Centra el texto del enlace */
+    width: 150px; /* Establece el ancho del enlace */
+    margin-right: 20px; /* Agrega margen derecho entre los enlaces */
+}
+
+/* Estilos para el carrusel */
 .carousel {
-    height: 100vh; /* Altura del carrusel igual a la altura de la ventana */
+    height: 100vh; /* Establece la altura del carrusel al 100% del alto de la ventana */
     margin-top: -50px; /* Desplaza el carrusel hacia arriba */
-    width: 100vw; /* Ancho del carrusel igual al ancho de la ventana */
+    width: 100vw; /* Establece el ancho del carrusel al 100% del ancho de la ventana */
     overflow: hidden; /* Oculta el contenido que se desborda del carrusel */
     position: relative; /* Establece la posición relativa para los elementos hijos */
 }
 
-/* Estilos para los elementos del carrusel */
 .carousel .list .item {
-    width: 100%; 
-    height: 100%; 
-    position: absolute; 
-    inset: 0 0 0 0; /* Establece los márgenes superior, derecho, inferior e izquierdo a 0 */
+    width: 100%; /* Establece el ancho del elemento al 100% */
+    height: 100%; /* Establece la altura del elemento al 100% */
+    position: absolute; /* Establece la posición absoluta para los elementos */
+    inset: 0 0 0 0; /* Establece el relleno del elemento */
 }
 
-/* Estilos para las imágenes dentro del carrusel */
 .carousel .list .item img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+    width: 100%; /* Establece el ancho de la imagen al 100% */
+    height: 100%; /* Establece la altura de la imagen al 100% */
+    object-fit: cover; /* Escala la imagen para que se ajuste al contenedor manteniendo su relación de aspecto */
 }
 
-/* Estilos para el contenido dentro del carrusel */
-
-.des{
-    color: #060000; 
-    text-align: right; /* Alinear el texto a la derecha */
-    padding: 10px; /* Espacio de relleno de 10px en todos los lados */
-    padding-right: 140px; /* Relleno de 140px solo en el lado derecho */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
-    border-radius: 10px; /* Esquinas redondeadas */
-}
+/* Estilos para el contenido del carrusel */
 .carousel .list .item .content {
     position: absolute; /* Establece la posición absoluta para el contenido */
     top: 20%; /* Coloca el contenido en la parte superior */
-    width: 1140px; 
-    max-width: 80%;
+    width: 1140px; /* Establece el ancho del contenido */
+    max-width: 80%; /* Establece el ancho máximo del contenido */
     left: 50%; /* Coloca el contenido en el centro horizontalmente */
     transform: translateX(-50%); /* Centra el contenido horizontalmente */
-    padding-right: 30%; /* Espaciado interno en el lado derecho */
-    box-sizing: border-box; /* La caja incluye el relleno y el borde en el tamaño total */
-    color: #fff; 
-    text-shadow: 0 5px 10px #0004; /* Sombra de texto */
+    padding-right: 30%; /* Agrega relleno a la derecha del contenido */
+    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total */
+    color: #fff; /* Establece el color del texto en blanco */
+    text-shadow: 0 5px 10px #0004; /* Agrega sombra al texto */
 }
 
+.carousel .list .item .author {
+    font-weight: bold; /* Establece el peso de la fuente en negrita */
+    letter-spacing: 10px; /* Aumenta el espaciado entre letras */
+}
 
-/* Estilos para el título y el tema dentro del carrusel */
 .carousel .list .item .title,
 .carousel .list .item .topic {
-    font-size: 5em; 
-    font-weight: bold; 
-    line-height: 1.3em; /* Altura de línea */
+    font-size: 5em; /* Establece el tamaño de fuente a 5em */
+    font-weight: bold; /* Establece el peso de la fuente en negrita */
+    line-height: 1.3em; /* Establece la altura de línea a 1.3em */
 }
 
+.carousel .list .item .topic {
+    color: #f1683a; /* Establece el color del tema */
+}
 
-/* Estilos para los botones dentro del carrusel */
 .carousel .list .item .buttons {
-    display: grid; /* Muestra los botones como una cuadrícula */
-    grid-template-columns: repeat(2, 130px); /* Dos columnas de 130px cada una */
-    grid-template-rows: 40px; /* Una fila de 40px */
-    gap: 5px; /* Espacio entre las celdas de la cuadrícula */
-    margin-top: 20px; /* Margen superior */
+    display: grid; /* Establece la visualización de cuadrícula para los botones */
+    grid-template-columns: repeat(2, 130px); /* Establece las columnas de la cuadrícula */
+    grid-template-rows: 40px; /* Establece las filas de la cuadrícula */
+    gap: 5px; /* Establece el espacio entre las celdas de la cuadrícula */
+    margin-top: 20px; /* Agrega margen superior a los botones */
 }
 
-/* Estilos para los botones dentro del carrusel */
 .carousel .list .item .buttons button {
-    border: none; /* Sin borde */
-    background-color: #eee; /* Color de fondo gris claro */
-    font-weight: 500;
+    border: none; /* Elimina el borde de los botones */
+    background-color: #eee; /* Establece el color de fondo de los botones */
+    letter-spacing: 3px; /* Aumenta el espaciado entre letras */
+    font-family: Poppins; /* Establece la fuente de los botones */
+    font-weight: 500; /* Establece el peso de la fuente en negrita */
 }
 
-/* Estilos para el segundo botón dentro del carrusel */
 .carousel .list .item .buttons button:nth-child(2) {
-    background-color: transparent; /* Fondo transparente */
-    border: 1px solid #fff; /* Borde sólido blanco */
-    color: #eee; /* Color de texto blanco */
+    background-color: transparent; /* Establece el color de fondo transparente para el segundo botón */
+    border: 1px solid #fff; /* Establece un borde de 1px sólido blanco para el segundo botón */
+    color: #eee; /* Establece el color del texto en blanco para el segundo botón */
 }
 
-/* Estilos para la miniatura del carrusel */
+/* Estilos para las miniaturas */
 .thumbnail {
-    position: absolute; 
-    bottom: 50px; /* Coloca la miniatura en la parte inferior */
-    left: 50%; /* Coloca la miniatura en el centro horizontalmente */
-    width: max-content; /* Ancho máximo del contenido */
-    z-index: 100; /* Establece el índice z para que esté por encima de otros elementos */
-    display: flex; /* Muestra los elementos como una fila flex */
-    gap: 20px; /* Espacio entre los elementos */
+    position: absolute; /* Establece la posición absoluta para las miniaturas */
+    bottom: 50px; /* Coloca las miniaturas en la parte inferior */
+    left: 50%; /* Coloca las miniaturas en el centro horizontalmente */
+    width: max-content; /* Establece el ancho máximo de las miniaturas */
+    z-index: 100; /* Asegura que las miniaturas estén por encima de otros elementos */
+    display: flex; /* Establece la visualización flex para las miniaturas */
+    gap: 20px; /* Establece el espacio entre las miniaturas */
 }
 
-/* Estilos para los elementos de la miniatura */
 .thumbnail .item {
-    width: 150px; /* Ancho del elemento */
-    height: 220px; /* Altura del elemento */
-    flex-shrink: 0; /* Evita que el elemento se reduzca en tamaño */
-    position: relative; /* Establece la posición relativa */
+    width: 150px; /* Establece el ancho de las miniaturas */
+    height: 220px; /* Establece la altura de las miniaturas */
+    flex-shrink: 0; /* Evita que las miniaturas se reduzcan en tamaño */
+    position: relative; /* Establece la posición relativa para las miniaturas */
 }
 
-/* Estilos para las imágenes dentro de la miniatura */
 .thumbnail .item img {
-    width: 100%; /* Ancho de la imagen */
-    height: 100%; /* Altura de la imagen */
-    object-fit: cover; /* Escala la imagen para que cubra todo el contenedor */
-    border-radius: 20px; /* Bordes redondeados */
+    width: 100%; /* Establece el ancho de la imagen al 100% */
+    height: 100%; /* Establece la altura de la imagen al 100% */
+    object-fit: cover; /* Escala la imagen para que se ajuste al contenedor manteniendo su relación de aspecto */
+    border-radius: 20px; /* Establece bordes redondeados para la imagen */
 }
 
+.thumbnail .item .content {
+    color: #fff; /* Establece el color del texto en blanco */
+    position: absolute; /* Establece la posición absoluta para el contenido */
+    bottom: 10px; /* Coloca el contenido en la parte inferior */
+    left: 10px; /* Coloca el contenido a la izquierda */
+    right: 10px; /* Coloca el contenido a la derecha */
+}
 
-
-/* Estilos para el título dentro de la miniatura */
 .thumbnail .item .content .title {
-    font-weight: 500; /* Establece el peso de la fuente a negrita */
+    font-weight: 500; /* Establece el peso de la fuente en negrita */
 }
 
-/* Estilos para la descripción dentro de la miniatura */
 .thumbnail .item .content .description {
-    font-weight: 300; /* Establece el peso de la fuente a ligero */
+    font-weight: 300; /* Establece el peso de la fuente en normal */
 }
 
 /* Estilos para las flechas de navegación */
 .arrows {
-    position: absolute; /* Establece la posición absoluta */
-    top: 80%; /* Coloca las flechas en el 80% de la altura */
-    right: 52%; /* Coloca las flechas en el 52% del ancho */
-    z-index: 100; /* Establece el índice z para que estén por encima de otros elementos */
-    width: 300px; /* Ancho de las flechas */
-    max-width: 30%; /* Ancho máximo de las flechas */
-    display: flex; /* Muestra las flechas como una fila flex */
-    gap: 10px; /* Espacio entre las flechas */
+    position: absolute; /* Establece la posición absoluta para las flechas */
+    top: 80%; /* Coloca las flechas en la parte superior */
+    right: 52%; /* Coloca las flechas en el centro horizontalmente */
+    z-index: 100; /* Asegura que las flechas estén por encima de otros elementos */
+    width: 300px; /* Establece el ancho de las flechas */
+    max-width: 30%; /* Establece el ancho máximo de las flechas */
+    display: flex; /* Establece la visualización flex para las flechas */
+    gap: 10px; /* Establece el espacio entre las flechas */
     align-items: center; /* Centra verticalmente las flechas */
 }
 
-/* Estilos para los botones de las flechas */
 .arrows button {
-    width: 40px; /* Ancho del botón */
-    height: 40px; /* Altura del botón */
-    border-radius: 50%; /* Bordes redondeados */
-    background-color: #eee4; /* Color de fondo gris claro */
-    border: none; /* Sin borde */
-    color: #fff; /* Color de texto blanco */
-    font-family: monospace; /* Familia de fuentes monoespaciada */
-    font-weight: bold; /* Establece el peso de la fuente a negrita */
-    transition: .5s; /* Transición suave */
+    width: 40px; /* Establece el ancho de los botones */
+    height: 40px; /* Establece la altura de los botones */
+    border-radius: 50%; /* Establece bordes redondeados para los botones */
+    background-color: #eee4; /* Establece el color de fondo de los botones */
+    border: none; /* Elimina el borde de los botones */
+    color: #fff; /* Establece el color del texto en blanco */
+    font-family: monospace; /* Establece la fuente de los botones */
+    font-weight: bold; /* Establece el peso de la fuente en negrita */
+    transition: .5s; /* Agrega una transición suave de medio segundo */
 }
 
-/* Estilos para los botones de las flechas al pasar el mouse */
 .arrows button:hover {
-    background-color: #fff; /* Cambia el color de fondo a blanco al pasar el mouse */
-    color: #000; /* Cambia el color de texto a negro al pasar el mouse */
+    background-color: #fff; /* Cambia el color de fondo de los botones al pasar el mouse */
+    color: #000; /* Cambia el color del texto de los botones al pasar el mouse */
 }
 
-/* Animación para mostrar el contenido del primer elemento */
+/* Animaciones */
+.carousel .list .item:nth-child(1) {
+    z-index: 1; /* Establece un índice Z para que el primer elemento esté en la parte superior */
+}
+
 .carousel .list .item:nth-child(1) .content .title,
 .carousel .list .item:nth-child(1) .content .topic,
 .carousel .list .item:nth-child(1) .content .des,
 .carousel .list .item:nth-child(1) .content .buttons {
     transform: translateY(50px); /* Desplaza el contenido hacia abajo */
-    filter: blur(20px); /* Aplica un efecto de desenfoque */
-    opacity: 0; /* Establece la opacidad a 0 */
-    animation: showContent .5s 1s linear 1 forwards; /* Animación para mostrar el contenido */
+    filter: blur(20px); /* Aplica un desenfoque al contenido */
+    opacity: 0; /* Establece la opacidad del contenido a 0 */
+    animation: showContent .5s 1s linear 1 forwards; /* Agrega una animación para mostrar el contenido */
 }
 
-/* Animación para mostrar el contenido */
 @keyframes showContent {
     to {
-        transform: translateY(0px); /* Desplaza el contenido a su posición original */
-        filter: blur(0px); /* Elimina el efecto de desenfoque */
-        opacity: 1; /* Establece la opacidad a 1 */
+        transform: translateY(0px); /* Mueve el contenido a su posición original */
+        filter: blur(0px); /* Elimina el desenfoque */
+        opacity: 1; /* Establece la opacidad del contenido a 1 */
     }
 }
 
-/* Animación para mostrar la imagen cuando se hace clic en siguiente */
+/* Agrega animación cuando se hace clic en Siguiente */
 .carousel.next .list .item:nth-child(1) img {
-    width: 150px; /* Ancho de la imagen */
-    height: 220px; /* Altura de la imagen */
-    position: absolute; /* Establece la posición absoluta */
+    width: 150px; /* Establece el ancho de la imagen a 150px */
+    height: 220px; /* Establece la altura de la imagen a 220px */
+    position: absolute; /* Establece la posición absoluta para la imagen */
     bottom: 50px; /* Coloca la imagen en la parte inferior */
     left: 50%; /* Coloca la imagen en el centro horizontalmente */
-    border-radius: 30px; /* Bordes redondeados */
-    animation: showImage .5s linear 1 forwards; /* Animación para mostrar la imagen */
+    border-radius: 30px; /* Establece bordes redondeados para la imagen */
+    animation: showImage .5s linear 1 forwards; /* Agrega una animación para mostrar la imagen */
 }
 
-/* Animación para mostrar la imagen */
 @keyframes showImage {
     to {
         bottom: 0; /* Coloca la imagen en la parte inferior */
-        left: 0; /* Coloca la imagen en el lado izquierdo */
-        width: 100%; /* Ancho de la imagen */
-        height: 100%; /* Altura de la imagen */
-        border-radius: 0; /* Elimina los bordes redondeados */
+        left: 0; /* Coloca la imagen en la parte izquierda */
+        width: 100%; /* Establece el ancho de la imagen al 100% */
+        height: 100%; /* Establece la altura de la imagen al 100% */
+        border-radius: 0; /* Establece bordes redondeados para la imagen */
     }
 }
 
-/* Animación para mostrar la miniatura cuando se hace clic en siguiente */
 .carousel.next .thumbnail .item:nth-last-child(1) {
     overflow: hidden; /* Oculta el contenido que se desborda */
-    animation: showThumbnail .5s linear 1 forwards; /* Animación para mostrar la miniatura */
+    animation: showThumbnail .5s linear 1 forwards; /* Agrega una animación para mostrar la miniatura */
 }
 
-/* Animación para mostrar la miniatura */
+.carousel.next .thumbnail {
+    animation: effectNext .5s linear 1 forwards; /* Agrega una animación para el efecto Siguiente */
+}
+
+@keyframes effectNext {
+    from {
+        transform: translateX(150px); /* Mueve las miniaturas hacia la derecha */
+    }
+}
+
+/* Establece las reglas para la animación de la miniatura */
 @keyframes showThumbnail {
     from {
-        width: 0; /* Ancho de la miniatura a 0 */
-        opacity: 0; /* Opacidad a 0 */
+        width: 0; /* Establece el ancho de la miniatura a 0 */
+        opacity: 0; /* Establece la opacidad de la miniatura a 0 */
     }
 }
 
-/* Establece la opacidad a 0 y la animación para ocultar el segundo elemento cuando se hace clic en anterior */
+/* Agrega estilos específicos para el estado Previo */
 .carousel.prev .list .item img {
-    z-index: 100; /* Establece el índice z a 100 */
+    z-index: 100; /* Establece un índice Z alto para la imagen */
 }
 
-/* Animación para ocultar el segundo elemento */
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2; /* Establece un índice Z para que el segundo elemento esté en la parte superior */
+}
+
 .carousel.prev .list .item:nth-child(2) img {
-    animation: outFrame 0.5s linear 1 forwards; /* Animación para ocultar el segundo elemento */
-    position: absolute; /* Establece la posición absoluta */
+    animation: outFrame 0.5s linear 1 forwards; /* Agrega una animación para ocultar la imagen */
+    position: absolute; /* Establece la posición absoluta para la imagen */
     bottom: 0; /* Coloca la imagen en la parte inferior */
-    left: 0; /* Coloca la imagen en el lado izquierdo */
+    left: 0; /* Coloca la imagen en la parte izquierda */
 }
 
-/* Animación para ocultar el segundo elemento */
 @keyframes outFrame {
     to {
-        width: 150px; /* Ancho de la imagen */
-        height: 220px; /* Altura de la imagen */
+        width: 150px; /* Establece el ancho de la imagen a 150px */
+        height: 220px; /* Establece la altura de la imagen a 220px */
         bottom: 50px; /* Coloca la imagen en la parte inferior */
         left: 50%; /* Coloca la imagen en el centro horizontalmente */
-        border-radius: 20px; /* Bordes redondeados */
+        border-radius: 20px; /* Establece bordes redondeados para la imagen */
     }
 }
 
-/* Animación para mostrar la miniatura cuando se hace clic en anterior */
 .carousel.prev .thumbnail .item:nth-child(1) {
     overflow: hidden; /* Oculta el contenido que se desborda */
-    opacity: 0; /* Establece la opacidad a 0 */
-    animation: showThumbnail .5s linear 1 forwards; /* Animación para mostrar la miniatura */
+    opacity: 0; /* Establece la opacidad de la miniatura a 0 */
+    animation: showThumbnail .5s linear 1 forwards; /* Agrega una animación para mostrar la miniatura */
 }
 
-/* Establece la opacidad a 0 y la animación para ocultar el contenido del segundo elemento cuando se hace clic en anterior */
+.carousel.prev .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none; /* Desactiva los eventos de puntero para los botones */
+}
+
 .carousel.prev .list .item:nth-child(2) .content .title,
 .carousel.prev .list .item:nth-child(2) .content .topic,
 .carousel.prev .list .item:nth-child(2) .content .des,
 .carousel.prev .list .item:nth-child(2) .content .buttons {
-    animation: contentOut 1.5s linear 1 forwards!important; /* Animación para ocultar el contenido */
+    animation: contentOut 1.5s linear 1 forwards!important; /* Agrega una animación para ocultar el contenido */
 }
 
-/* Animación para ocultar el contenido */
 @keyframes contentOut {
     to {
-        transform: translateY(-50px); /* Desplaza el contenido hacia arriba */
-        filter: blur(20px); /* Aplica un efecto de desenfoque */
-        opacity: 0; /* Establece la opacidad a 0 */
+        opacity: 0; /* Establece la opacidad del contenido a 0 */
     }
 }
 
-/* Animación para desplazar la miniatura cuando se hace clic en siguiente */
-.carousel.next .thumbnail {
-    animation: effectNext .5s linear 1 forwards; /* Animación para desplazar la miniatura */
-}
-
-/* Animación para desplazar la miniatura */
-@keyframes effectNext {
-    from {
-        transform: translateX(150px); /* Desplaza la miniatura a la derecha */
-    }
-}
-
-/* Deshabilita los botones de las flechas cuando se hace clic en siguiente o anterior */
-.carousel.next .arrows button,
-.carousel.prev .arrows button {
-    pointer-events: none; /* Deshabilita los eventos de puntero */
+/* Estilos para la descripción */
+.des {
+    color: #000000; /* Cambia el color del texto a negro */
+    text-align: right; /* Alinea el texto a la derecha */
+    padding: 10px; /* Agrega un espacio de relleno de 10px en todos los lados */
+    padding-right: 140px; /* Agrega un relleno de 140px solo en el lado derecho */
+    background-color: rgba(255, 255, 255, 0.8); /* Establece un fondo blanco semi-transparente */
+    border-radius: 10px; /* Establece bordes redondeados para la descripción */
 }
