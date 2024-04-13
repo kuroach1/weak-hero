@@ -1,0 +1,105 @@
+body {
+  margin: 0; /* Margen exterior */
+  padding: 0; /* Espaciado interior */
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+  font-family: Arial, sans-serif; /* Familia de fuentes */
+  background-color: black; 
+  background-image: linear-gradient(to top, #000000, #333333); /* Degradado de fondo */
+  border-radius: 5px; /* Bordes redondeados  */
+  padding: 10px; /* Espaciado interno para los elementos */
+  text-align: center; /* Centrar el texto */
+  position: sticky; /* Establece el menú como pegajoso */
+  top: 0; /* Coloca el menú en la parte superior */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  color: white; /* Color de texto blanco */
+  text-decoration: none; /* Sin subrayado para los enlaces */
+  margin-right: 40px; /* Margen derecho entre los enlaces */
+}
+
+/* Estilos para los enlaces del menú al pasar el mouse */
+.menu a:hover {
+  color: lightgrey; /* Cambia el color del texto a gris claro */
+}
+
+.menu-link {
+  display: inline-block;
+  text-align: center;
+  width: 150px; 
+  margin-right: 20px; /* Margen derecho entre los enlaces */
+}
+
+/* Estilos para los títulos h2 */
+h2 {
+  color: #f5f5f5; 
+  border-radius: 10px; /* Radio de borde para esquinas redondeadas */
+  padding: 10px; /* Espaciado interior */
+  display: inline-block; /* Mostrar como bloque en línea */
+  background-image: linear-gradient(to bottom right, #b98eff, #7d44ff); /* Degradado de fondo */
+}
+
+.linkPagina {
+  text-align: center; /* Centrar el texto */
+}
+
+#imagen-portada-webtoon {
+  background-image: url('Img/episodios.jpg'); 
+  background-size: cover; /* Tamaño de la imagen de fondo */
+  background-attachment: fixed; /* Fijar la imagen de fondo */
+}
+
+#contenedor {
+  text-align: center; /* Centrar el texto */
+  background-color: #f8f8f8; /* Color de fondo */
+  color: rgb(253, 250, 250); /* Color del texto */
+  font-family: Arial, sans-serif; /* Familia de fuentes */
+  margin-left: 170px; /* Margen izquierdo */
+  margin-right: 170px; /* Margen derecho */
+  background-color: rgba(19, 18, 18, 0.82); /* Fondo transparente */
+}
+
+.sinopsis {
+  text-align: center; /* Centrar el texto */
+  margin-left: 70px; /* Mover a la derecha por 70px */
+  margin-right: 70px; /* Mover a la izquierda por 70px */
+}
+
+.imagen {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Define un contenedor flexible (flexbox)*/
+section {
+  display: flex;
+  height: 430px; /* Altura del contenedor de sección */
+  width: 700px; /* Ancho del contenedor de sección */
+}
+
+/* Estiliza las imágenes dentro del contenedor de sección */
+section img {
+  flex-grow: 1; /* Permite que la imagen crezca para llenar el espacio disponible en el contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio disponible en el contenedor */
+  opacity: .8; /* Establece la opacidad de las imágenes en 0.8 */
+  transition: .5s ease; /* Agrega una transición suave de 0.5 segundos a cualquier cambio en la imagen */
+  width: 0px; /* Inicialmente, las imágenes tienen un ancho de 0px */
+}
+
+/* Cuando se pasa el cursor sobre una imagen, cambia su estilo */
+section img:hover {
+  cursor: crosshair; /* Cambia el cursor a una cruz */
+  filter: contrast(120%); /* Aumenta el contraste de la imagen al 120% cuando se pasa el cursor */
+  opacity: 1; /* Aumenta la opacidad de la imagen a 1 cuando se pasa el cursor */
+  width: 300px; /* Aumenta el ancho de la imagen a 300px cuando se pasa el cursor */
+}
+
+/* Ajuste de la galería */
+.galeria {
+  margin-left: 110px; /* Mueve el contenido 110px hacia la derecha */
+}

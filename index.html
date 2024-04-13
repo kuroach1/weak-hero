@@ -1,181 +1,110 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="Estilos/estiloLogin.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script>
+function checkInput(input) {
+    if (input.value.trim() !== '') {
+        input.classList.add('has-value');
+    } else {
+        input.classList.remove('has-value');
+    }
+}
+</script>
 </head>
 <body>
-    
-</body>
-</html> -->
-
-
-<!-- Informa al navegador que tipo de documento va a leer -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilos/Estilo.css">
-    <title>Weak Hero Class 1</title>
-</head>
-
-
-<div class="imagenPortada">
-</div>
-
-<body>
-    <!-- menu -->
-    <nav class="menu">
-        <a class="menu-link" href="index.html">Detalles</a> |
-        <a class="menu-link" href="ost.html">OST</a> |
-        <a class="menu-link" href="episodios.html">Episodios</a> |
-        <a class="menu-link" href="webtoon.html">WebToon</a>
+<header class="header">
+    <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Contactanos</a>
+        <a href="#">Servicios</a>
     </nav>
 
+    <form action="" class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button type="submit"><i class='bx bx-search'></i></button>
+    </form>
+</header>
 
-<div id="contenedor">
-    <!-- Salto de linea -->
-    <br>
-  
-    <!-- indice -->
-    <div class="Indice">
-        <h2>Indice</h2>
-        <nav>    
-            <ul>
-                <li><a href="#ficha_tecnica">Ficha Técnica</a></li>
-                <li><a href="#sinopsis">Sinopsis</a></li>
-                <li><a href="#trailer">Trailer</a></li>
-                <li><a href="#opinion">Opinión</a></li>
-                <li><a href="#reparto">Reparto</a></li>
-                <li><a href="#produccion">Producción</a></li>
-                <li><a href="#premios">Premios</a></li>
-                <li><a href="#curiosidades">Curiosidades</a></li>
-                <li><a href="#galeria">Galería de imágenes</a></li>
-            </ul>
-        </nav>
-    </div>
-    <br>
-     
-    <!-- Contenido de la pagina -->
-    <div class="contenido">
-        <div class="ficha">
-            <h2 id="ficha_tecnica">Ficha Técnica</h2>
-            <ul>
-                <li>Título:약한영웅 Class 1 / Yaghanyeongung Class 1 (Título en inglés: Weak Hero Class 1)</li>
-                <li>Periodo de emisión:18-Noviembre-2022</li>
-                <li>Horario:Viernes</li>
-                <li>Temporadas:1 (8 episodios)</li>
-                <li>País:Corea del Sur</li> 
-                <li>Director:Park Dan-hee</li>    
-                <li>Guión:You Su-min (Adaptado del Webtoon de Seo Pae-Seu y Kim Jin-Seok)</li>
-                <img  class="imagen-ficha" src="portada.jpg" alt="K-drama whc1" width="350" height="350">
-            </ul>
-        </div> 
-        <h2 id="sinopsis">Sinopsis</h2>
-        <p>Un drama de acción y crecimiento sobre Yeon Shi Eun, un estudiante modelo con calificaciones que pertenecen al 1% superior de la escuela. Se ve débil pero lucha contra numerosas violencias dentro y fuera de la escuela. Representa a un niño naturalmente débil en términos de apariencia, dominando una escuela parecida a una jungla usando su cerebro, poder analítico y herramientas.</p>
-        <br>
-        <br>
-        <br>
+<div class="background"></div>
 
-        <!-- video del trailer -->
-        <p><h2 id="trailer">Trailer</h2></p>
-        <div class="video">
-        <iframe width="600" height="350" src="https://www.youtube.com/embed/RRDByzGXhSA?si=5EfbczC2Z5WqwXRB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="container">
+    <div class="content"></div>
+
+    <div class="logreg-box">
+        <div class="form-box login">
+            <h2>¡Bienvenidos!</h2>
+            <form action="#">
+                <h1>Iniciar Sesión</h1>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" required oninput="checkInput(this)">
+                    <label>Correo Electronico</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock'></i></span>
+                    <input type="password" required oninput="checkInput(this)">
+                    <label>Contraseña</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Recordar</label><a href="#">¿Ha olvidado su contraseña?</a>
+                </div>
+                <br>
+                <button type="submit" class="btn">Iniciar sesión</button>
+
+                <div class="login-register">
+                    <p>¿No tienes una cuenta? <a href="#" class="register-link"> Crear una cuenta</a></p>
+                </div>
+                
+            </form>
         </div>
-        
-        <h2 id="opinion">Opinión</h2>
-            <p>Para mi WHC1 logra transmitir una problemática muy real en la sociedad coreana: el acoso escolar. En un país donde este fenómeno es tan prevalente, esta obra ofrece una perspectiva cruda y desgarradora sobre sus consecuencias.</p>
-            <p>La serie no solo muestra la crueldad del acoso, sino también cómo esta situación fuerza a las víctimas a buscar soluciones por sí mismas, a menudo en un entorno hostil que les ofrece muy pocas alternativas. El retrato de la lucha diaria por sobrevivir en un ambiente tan tóxico es desgarrador y provoca una mezcla de emociones que van desde la frustración hasta la ira y el dolor profundo.</p>
-            <p>Destaco sobre todo cómo Park Ji-hoon y Choi Hyun-wook interpretaron sus papeles. Ellos son el alma de la historia y transmiten de manera increíble la angustia y el dolor de quienes sufren acoso. Sus actuaciones fueron geniales, realmente te hacen conectar con los personajes y sentir su sufrimiento de una manera muy auténtica. Añaden una capa de verdad y humanidad a la trama, que, aunque exagerada en la serie, refleja una realidad desgarradora que muchas personas enfrentan día tras día. </p>
 
-        <h2 id="reparto">Reparto</h2>
-        <h3>Estudiantes de la Secundaria Byeoksan</h3>
-        <ul>
-            <li><a href="https://drama.fandom.com/es/wiki/Park_Ji_Hoon_(1999)">Park Ji Hoon</a> como Yeon Shi Eun</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Choi_Hyun_Wook">Choi Hyun Wook</a> como Ahn Su Ho</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Hong_Kyung">Hong Kyung</a> como Oh Beom Seok</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Lee_Yeon">Lee Yeon</a> como Young Yi</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Shin_Seung_Ho">Shin Seung Ho</a> como Jeon Seok Dae</li>
-        </ul>
-    
-        <h3>Profesores de la Secundaria Byeoksan</h3>
-        <ul>
-            <li><a href="https://drama.fandom.com/es/wiki/Yum_Ji_Young">Yum Ji Young</a> como Profesora de aula</li>
-            <li><a href="https://mydramalist.com/people/127051-jang-myung-jin">Jang Myung Jin</a> como Profesor de gimnasia</li>
-            <li><a href="https://drama.fandom.com/es/wiki/AQUINAS">Kang Min Soo</a> como Profesor de matemáticas</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Kim_Da_In">Kim Da In</a> como Profesor de historia coreana</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Kim_Hyun_Joo">Kim Hyun</a> como Directora</li>
-        </ul>
-    
-        <h3>Grupo de Jeon Seok Dae</h3>
-        <ul>
-            <li><a href="https://asianwiki.com/Jang_Tae-Hyun_(1997)">Jang Tae Hyun</a> como pelo largo</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Chun_Myung_Hoon">Chun Myung Woo</a> como Crong</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Na_Chul">Na Chul</a> como Kim Gil Soo</li>
-            <li><a href="https://drama.fandom.com/es/wiki/Cha_Sung_Je">Cha Sung Je</a> como Sung Chan</li>
-        </ul>
+        <div class="form-box register">
+            <form action="#">
+                <h1>Registrarse</h1>
 
-        <h2 id="producción">Producción</h2>
-        <ul>
-            <li>Director: <a href="https://mydramalist.com/people/101095-you-su-min">You Su Min (유수민)</a></li>
-            <li>Guionista: <a href="https://mydramalist.com/people/101095-you-su-min">You Su Min (유수민)</a></li>
-        </ul>
-        <h2 id="premios">Premios</h2>
-        <ul>
-            <li>2023 Korea Drama Awards: Best New Actress (Lee Yeon)</li>
-            <li>2023 Korea Drama Awards: Best New Actor (Park Ji Hoon)</li>
-            <li>2023 Asia Contents Awards & Global OTT Awards: Best OTT Original</li>
-            <li>2023 2nd Blue Dragon Series Awards: Best Rookie Actor (Park Ji Hoon)</li>
-            <li>2023 2nd Blue Dragon Series Awards: Why Not Award (Choi Hyun Wook)</li>
-        </ul>
-    
-        <h2 id="curiosidades">Curiosidades</h2>
-        <ul>
-            <li>Basado en el webcomic "Yakhanyoungwoong" escrito por Seo Pae Seu e ilustrado por Kim Jin Seok (publicado por primera vez el 5 de mayo de 2018 a través de Naver).</li>
-            <li>La producción del drama confirmó la realización de dos temporadas aún antes de filmar la primera.</li>
-            <li>Es la segunda vez que Park Ji Hoon y Kim Su Gyeom trabajan juntos, la primera vez fue en At a Distance, Spring is Green.</li>
-            <li>Es la segunda vez que Kim Su Gyeom y Lee Yeon trabajan juntos, la primera vez fue en Juvenile Justice.</li>
-        </ul>
-        <h2 id="galeria">Galería de imágenes</h2>
-        <section>
-            <img src="imagenes/1.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/2.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/3.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/4.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/5.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/6.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/7.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/8.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/9.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/10.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/11.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/12.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/13.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/14.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/15.jpg" alt="Descripción de la imagen">
-            <img src="imagenes/16.jpg" alt="Descripción de la imagen">
-        </section>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input type="text" required oninput="checkInput(this)">
+                    <label>Nombre</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                    <input type="email" required oninput="checkInput(this)">
+                    <label>Correo Electronico</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock'></i></span>
+                    <input type="password" required oninput="checkInput(this)">
+                    <label>Contraseña</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Aceptar terminos y condiciones</label>
+                </div>
+                <br>
+                <button type="submit" class="btn">Registrarse</button>
+
+                <div class="login-register">
+                    <p>¿Ya tienes una cuenta? <a href="#" class="login-link">Iniciar Sesión</a></p>
+                </div>
+                
+            </form>
+        </div>
+
     </div>
+</div>
 
-    <!-- formulario del comentario -->
-    <div class="comentario">
-        <h2>Deja un comentario</h2>
-        <form action="#" method="post">
-            <textarea rows="4" cols="80" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-    <br>
-    <!-- Pie de página-->
-    <div class="pie-pagina">
-        <label for="">Autor: José Preciado | </label>
-        <label for="">Dirección | </label>
-        <label for="">Redes sociales: mirPre@gmail.com</label>
-    </div>  
-     </div>
-
+<script src="script/script.js"></script>
 </body>
 </html>
-

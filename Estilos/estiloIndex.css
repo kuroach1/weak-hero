@@ -1,0 +1,211 @@
+/* Estilos generales */
+body {
+  margin: 0; /* Margen exterior */
+  padding: 0; /* Espaciado interior */
+}
+
+/* Estilos para el contenedor principal */
+#contenedor {
+  background-color: rgba(19, 18, 18, 0.82); /* Fondo transparente */
+  color: rgb(253, 250, 250); /* Color del texto */
+  font-family: Arial, sans-serif; /* Familia de fuentes */
+  margin-left: 170px; 
+  margin-right: 170px; 
+  text-align: justify; /* Alinear el texto al tamaño del contenedor */
+}
+
+/* Estilo de la clase contenedor */
+.contenedor {
+  display: flex; /* Usar flexbox para el diseño */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Altura del viewport */
+  justify-content: center; /* Centrar horizontalmente */
+  text-align: center; /* Centrar contenido horizontalmente */
+}
+
+/* Estilo de la menú de navegación */
+.menu {
+  font-family: Arial, sans-serif; /* Familia de fuentes */
+  background-color: black; 
+  background-image: linear-gradient(to top, #000000, #333333); /* Degradado de fondo */
+  border-radius: 5px; /* Bordes redondeados  */
+  padding: 10px; /* Espaciado interno para los elementos */
+  position: sticky; /* Establece el menú como pegajoso */
+  text-align: center; /* Centrar el texto */
+  top: 0; /* Coloca el menú en la parte superior */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  color: white; 
+  margin-right: 40px; /* Margen derecho entre los enlaces */
+  text-decoration: none; /* Sin subrayado para los enlaces */
+}
+
+/* Estilos para los enlaces del menú al pasar el mouse */
+.menu a:hover {
+  color: lightgrey; /* Cambia el color del texto a gris claro */
+}
+
+/* Estilos para los títulos h2 */
+h2 {
+  background-image: linear-gradient(to bottom right, #b98eff, #7d44ff); /* Degradado de fondo */
+  border-radius: 10px; 
+  color: #f5f5f5; 
+  display: inline-block; /* Mostrar como bloque en línea */
+  padding: 10px; /* Espaciado interior */
+}
+
+/* Estilos para los títulos h3 */
+h3 {
+  color: #a725a7; 
+}
+
+/* Estilos para listas no ordenadas */
+ul {
+  list-style-type: disc; /* Tipo de viñeta */
+  padding: 0; /* Sin espaciado interior */
+}
+
+/* Estilos para los elementos de la lista */
+ul li {
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos para las fichas */
+.ficha {
+  margin-top: 0px; 
+}
+
+/* Estilos para imágenes dentro de fichas */
+.ficha .imagen-ficha {
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  float: left; /* Flotar a la izquierda */
+  margin-right: 20px; /* Margen derecho */
+}
+
+/* Estilos para el índice */
+.Indice {
+  background: linear-gradient(45deg, #b98eff, #7d44ff); /* Degradado de fondo */
+  border-radius: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  height: 400px; /* Altura del índice */
+  margin-left: 120px; /* Margen izquierdo */
+  padding-left: 30px; /* Espaciado interior a la izquierda */
+  width: 200px; /* Ancho del índice */
+}
+
+/* Estilo del contenedor de contenido */
+.contenido {
+  max-width: 700px; /* Ancho máximo del contenido */
+  padding-left: 120px; /* Espaciado interior a la izquierda */
+  text-align: left; /* Ajustar alineación vertical según sea necesario */
+}
+
+/* Estilos para un área de texto */
+textarea {
+  border: 1px solid #ccc; /* Borde del área de texto */
+  border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+  height: 50px; /* Altura del área de texto */
+  margin-bottom: 10px; /* Margen inferior */
+  padding: 10px; /* Espaciado interior */
+  width: 97%; /* Ancho del área de texto */
+}
+
+/* Estilos para un botón */
+button {
+  background-color: #007bff; 
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+  color: white; /* Color del texto del botón */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+}
+
+/* Estilos para el botón al pasar el cursor */
+button:hover {
+  background-color: #0056b3; 
+}
+
+/* Estilos para un comentario */
+.comentario {
+  background-color: #f9f9f9; /* Color de fondo del comentario */
+  border: 1px solid #ccc; /* Borde del comentario */
+  border-radius: 5px; 
+  margin: 20px; /* Margen exterior */
+  padding: 20px; /* Espaciado interior */
+}
+
+/* Estilos para una imagen */
+.imagen {
+  padding-left: 150px; /* Espaciado interior a la izquierda */
+}
+
+/* Define un contenedor flexible (flexbox)*/
+section {
+  display: flex;
+  height: 430px; /* Altura del contenedor de sección */
+  width: 700px; /* Ancho del contenedor de sección */
+}
+
+/* Estiliza las imágenes dentro del contenedor de sección */
+section img {
+  flex-grow: 1; /* Permite que la imagen crezca para llenar el espacio disponible en el contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio disponible en el contenedor */
+  opacity: .8; /* Establece la opacidad de las imágenes en 0.8 */
+  transition: .5s ease; /* Agrega una transición suave de 0.5 segundos a cualquier cambio en la imagen */
+  width: 0px; /* Inicialmente, las imágenes tienen un ancho de 0px */
+}
+
+/* Cuando se pasa el cursor sobre una imagen, cambia su estilo */
+section img:hover {
+  cursor: crosshair; /* Cambia el cursor a una cruz */
+  filter: contrast(120%); /* Aumenta el contraste de la imagen al 120% cuando se pasa el cursor */
+  opacity: 1; /* Aumenta la opacidad de la imagen a 1 cuando se pasa el cursor */
+  width: 300px; /* Aumenta el ancho de la imagen a 300px cuando se pasa el cursor */
+}
+
+/* Estilos para un video */
+.video {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio inferior */
+  margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para la imagen de portada */
+.imagenPortada {
+  background-image: url('Img/PorTitulo.png'); /* URL de la imagen de portada */
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: 100% 100%; /* Ajusta la imagen para que ocupe todo el espacio */
+  height: 400px; /* Altura fija para la imagen de portada */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Estilo para la imagen de fondo */
+#imagen-fondo {
+  background-attachment: fixed; /* Fijar la imagen de fondo */
+  background-image: url('Img/6.jpg'); 
+  background-size: cover; 
+}
+
+/* Estilo para el pie de página */
+.pie-pagina {
+  padding-left: 200px; /* Espaciado interior a la izquierda */
+}
+
+/* Estilos específicos para enlaces dentro del contenedor principal */
+#contenedor a {
+  color: #f0e8ef; /* Color de los enlaces */
+}
+
+/* Estilo para el enlace del menú */
+.menu-link {
+  display: inline-block;
+  margin-right: 20px; /* Margen derecho entre los enlaces */
+  text-align: center;
+  width: 150px;
+}
